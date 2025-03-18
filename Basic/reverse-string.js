@@ -6,12 +6,16 @@ function reverseNumber(num){
 }
 
 reverseNumber(-123)
+//recursive
+function reverseString(str) {
+    // Base case: if the string is empty or has only one character, return it
+    if (str === "") {
+        return str;
+    }
+    // Recursive case: take the last character and add the reverse of the remaining string
+    return reverseString(str.slice(1)) + str[0];
+}
 
-//reverse string
-// function reverseString(str){
-//     const revStr = str.split('').reverse().join('');
-//     return revStr;
-// }
+console.log(reverseString("abcd"));
 
-// console.log(reverseString("abcd"));
 
